@@ -1,0 +1,60 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "prettier/react",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks",
+        "eslint-plugin-import-helpers",
+        "prettier"
+    ],
+    "rules": {
+      "global-require": 0,
+      "no-console": "off",
+      "no-param-reassign": [
+        "error",
+        { "props": true, "ignorePropertyModificationsFor": ["draftState"] }
+      ],
+      "import/no-extraneous-dependencies": "off",
+      "react/forbid-prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/style-prop-object": "off",
+      "react/state-in-constructor": "off",
+      "import/no-relative-packages": "off",
+      "react/prop-types": "off",
+      "import/no-import-module-exports": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "endOfLine": "auto"
+        }
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/jsx-props-no-spreading": ["off"],
+      "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".js"] }],
+      "import/prefer-default-export": "off",
+      "import-helpers/order-imports": [
+        "warn",
+        {
+          "newlinesBetween": "always", // new line between groups
+          "groups": ["/^react/", "module", ["parent", "sibling", "index"]],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+        }
+      ]
+    }
+}
